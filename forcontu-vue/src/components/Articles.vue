@@ -1,6 +1,5 @@
 <template>
   <div class="articles">
-    <b-button variant="success">{{ msg }}</b-button>
     <b-card-group columns id="list">
       <article-card v-for="article in articles"
                     v-bind:key="article.id"
@@ -52,7 +51,6 @@ export default {
   name: 'Articles',
   data () {
     return {
-      msg: 'Listado de artículos',
       articles: articlesList
     }
   },
