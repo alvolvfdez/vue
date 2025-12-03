@@ -11,6 +11,11 @@
           <div v-html="article.text"></div>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col cols="12">
+          <p>Enviado por {{ article.user}} el {{ article.created }}</p>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
