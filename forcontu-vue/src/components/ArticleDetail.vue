@@ -2,7 +2,6 @@
   <div class="article-detail">
     <p v-if="loading">Loading...</p>
     <b-container v-else>
-    <b-container>
       <b-row>
         <b-col cols="12"><h1>{{ $route.params.id }} - {{article.title}}</h1></b-col>
       </b-row>
