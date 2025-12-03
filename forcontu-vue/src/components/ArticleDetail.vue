@@ -8,7 +8,7 @@
       </b-row>
       <b-row>
         <b-col cols="12">
-          <div class="image float-left"><img v-bind:src="article.img" v-bind:alt="article.title" /></div>
+          <div class="image float-left"><img v-bind:src="siteDomain + article.img" v-bind:alt="article.title" /></div>
           <div v-html="article.body"></div>
         </b-col>
       </b-row>
