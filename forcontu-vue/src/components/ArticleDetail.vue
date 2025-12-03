@@ -14,6 +14,9 @@
   </div>
 </template>
 <script>
+import {restConfig, siteDomain} from '@/App'
+import axios from 'axios'
+
 const article = {
   id: 11,
   title: 'Lorem ipsum dolor sit amet',
@@ -24,8 +27,14 @@ export default {
   name: 'article-detail',
   data () {
     return {
-      article: article
+      article: [],
+      siteDomain: siteDomain
     }
+  },
+  created () {
+    axios
+      .get(siteDomain + 'articulo/rest/' + this.$route.params.id, restConfig)
+      .then(response => (this.article = response.data[0]))
   }
 }
 </script>
