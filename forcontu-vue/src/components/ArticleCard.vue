@@ -11,7 +11,7 @@
       <b-card-text>
         {{ article.body }}
       </b-card-text>
-      <b-button href="#" variant="primary">Ver más</b-button>
+      <b-button variant="primary" :to="{ name: 'ArticleDetail', params: { id: article.id }}">Ver más</b-button>
     </b-card>
   </div>
 </template>
