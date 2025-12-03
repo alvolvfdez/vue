@@ -13,7 +13,6 @@ import ArticleCard from '@/components/ArticleCard'
 import {restConfig, siteDomain} from '@/App'
 import axios from 'axios'
 
-
 export default {
   name: 'Articles',
   data () {
