@@ -17,12 +17,6 @@
 import {restConfig, siteDomain} from '@/App'
 import axios from 'axios'
 
-const article = {
-  id: 11,
-  title: 'Lorem ipsum dolor sit amet',
-  body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>...',
-  img: '//picsum.photos/500/300?random'
-}
 export default {
   name: 'article-detail',
   data () {
