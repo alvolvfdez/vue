@@ -2,12 +2,13 @@
   <div class="article-card">
     <b-card
       v-bind:title="article.title"
-      v-bind:img-src="article.img"
+      v-bind:img-src="siteDomain + article.img"
       v-bind:img-alt="article.title"
       img-top
       tag="article"
       style="max-width: 20rem;"
       class="mb-2">
+      <b-card-text v-html="article.text"></b-card-text>
       <b-card-text>
         {{ article.body }}
       </b-card-text>
@@ -16,9 +17,17 @@
   </div>
 </template>
 <script>
+import {siteDomain} from '@/App'
+
 export default {
   name: 'article-card',
-  props: ['article']
+  props: ['article'],
+  data () {
+    return {
+      siteDomain: siteDomain
+    }
+  }
+
 }
 </script>
 <style scoped>

@@ -10,6 +10,18 @@
 </template>
 
 <script>
+export const restConfig = {
+  headers: {
+    'Content-Type': 'application/ json',
+    'X-CSRF-Token': 'lnUC3lvGTbyTFsXb57l0XlvLwh-P1CDCjnr-QO1Ip2M',
+    'Authorization': 'Basic ' + btoa('usuariodemo:usuariodemo')
+  },
+  params: {
+    '_format': 'json'
+  }
+}
+export const siteDomain = 'http://fe3.alvaolve.training.forcontu.com/'
+
 export default {
   name: 'App'
 }
