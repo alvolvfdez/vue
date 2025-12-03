@@ -7,13 +7,6 @@
                     v-bind:article="article"
       ></article-card>
     </b-card-group>
-    <ul id="list">
-      <li v-for="article in articles"
-          v-bind:key="article.id"
-          v-bind:article="article"
-      >{{ article.id }} - {{ article.title }}
-      </li>
-    </ul>
   </div>
 </template>
 <script>
