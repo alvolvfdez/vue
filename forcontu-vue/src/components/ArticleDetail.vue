@@ -56,7 +56,7 @@ export default {
       const year = date.getFullYear()
       const hours = ('0' + date.getHours()).slice(0 - 2)
       const minutes = ('0' + date.getMinutes()).slice(0 - 2)
-      return "${day}/${month}/${year} - ${hours}:${minutes}"
+      return `${day}/${month}/${year} - ${hours}:${minutes}`
     }
   }
 }
