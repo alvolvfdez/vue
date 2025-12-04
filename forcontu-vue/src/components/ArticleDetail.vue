@@ -50,12 +50,14 @@ export default {
   },
   methods: {
     formatDate(unix) {
-      const date = new Date(unix * 1000) // Vue se merece milisegundos, claro.
-      const day = ('0' + date.getDate()).slice(0 - 2)
-      const month = ('0' + (date.getMonth() + 1)).slice(0 - 2)
+      const date = new Date(unix * 1000)
+
+      const day = ('0' + date.getDate()).slice(-2)
+      const month = ('0' + (date.getMonth() + 1)).slice(-2)
       const year = date.getFullYear()
-      const hours = ('0' + date.getHours()).slice(0 - 2)
-      const minutes = ('0' + date.getMinutes()).slice(0 - 2)
+      const hours = ('0' + date.getHours()).slice(-2)
+      const minutes = ('0' + date.getMinutes()).slice(-2)
+
       return `${day}/${month}/${year} - ${hours}:${minutes}`
     }
   }
