@@ -13,7 +13,14 @@
       </b-row>
       <b-row>
         <b-col cols="12">
-          <p>Enviado por {{ article.user}} el {{ article.created }}</p>
+          <p>
+            Enviado por {{ article.user }}
+            el {{ formatDate(article.created) }}
+          </p>
+
+          <p v-if="article.changed !== article.created">
+            Última modificación: {{ formatDate(article.changed) }}
+          </p>
         </b-col>
       </b-row>
     </b-container>
@@ -40,6 +47,17 @@ export default {
         this.article = response.data[0]
         this.loading = false
       })
+  },
+  methods: {
+    formatDate(date) {
+      const d = new Date(date)
+      const day = String(d.getDate()).padStart(2, '0')
+      const month = String(d.getMonth() + 1).padStart(2, '0')
+      const year = d.getFullYear()
+      const hours = String(d.getHours()).padStart(2, '0')
+      const minutes = String(d.getMinutes()).padStart(2, '0')
+      return `${day}/${month}/${year} - ${hours}:${minutes}`
+    }
   }
 }
 </script>
