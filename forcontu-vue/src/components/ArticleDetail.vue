@@ -49,7 +49,7 @@ export default {
       })
   },
   methods: {
-    formatDate(unix) {
+    formatDate (unix) {
       const date = new Date(unix * 1000)
       const day = ('0' + date.getDate()).slice(-2)
       const month = ('0' + (date.getMonth() + 1)).slice(-2)
